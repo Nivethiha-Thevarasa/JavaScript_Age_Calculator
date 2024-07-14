@@ -2,10 +2,6 @@
 
 This repository contains a simple web-based Age Calculator application built using HTML, CSS, and JavaScript. Users can input their birth date 📅 and calculate their age in years, months, and days.
 
-## Screenshots 📸
-
-![JavaScript Age Calculator Screenshot]("C:\Users\HP\Desktop\CodeAlpha\JavaScript_Age_Calculator\Screenshot.png")
-
 ## Features ✨
 
 - **Calculate Age:** Enter your birth date using the date picker and click "Calculate" to see your age in years, months, and days.
