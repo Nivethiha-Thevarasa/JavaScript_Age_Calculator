@@ -4,7 +4,7 @@ This repository contains a simple web-based Age Calculator application built usi
 
 ## Screenshots 📸
 
-![JavaScript Age Calculator Screenshot]("C:\Users\HP\OneDrive\Pictures\Screenshots\Screenshot (70).png")
+![JavaScript Age Calculator Screenshot](screenshot.png)
 
 ## Features ✨
 
