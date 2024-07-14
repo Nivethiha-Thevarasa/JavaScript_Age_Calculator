@@ -1,4 +1,4 @@
-# JavaScript_Age_Calculator# JavaScript Age Calculator 🎂 - Responsive
+# JavaScript Age Calculator 🎂 - Responsive
 
 This repository contains a simple web-based Age Calculator application built using HTML, CSS, and JavaScript. Users can input their birth date 📅 and calculate their age in years, months, and days.
 
