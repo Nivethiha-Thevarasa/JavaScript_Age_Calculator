@@ -56,12 +56,12 @@
 }
 
 .input-box input {
-    width: 100%;
+    width: 50%; /* Adjusted width to make input box smaller */
     margin-bottom: 20px;
-    padding: 14px 20px;
+    padding: 10px 15px; /* Adjusted padding to make input box smaller */
     border: 0;
     outline: 0;
-    font-size: 15px;
+    font-size: 14px; /* Adjusted font size to make input box smaller */
     border-radius: 5px;
     position: relative;
 }
@@ -113,6 +113,7 @@
     }
 
     .input-box input {
+        width: 70%; /* Adjusted width for smaller screens */
         font-size: 14px;
     }
 
@@ -135,6 +136,7 @@
     }
 
     .input-box input {
+        width: 90%; /* Adjusted width for smallest screens */
         font-size: 12px;
     }
 
