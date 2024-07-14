@@ -3,66 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Age Calculator </title>
+    <title>Age Calculator</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="calculator">
-            <h1> Javascript <br><span>Age Calculator</span></h1>
+            <h1>JavaScript <br><span>Age Calculator</span></h1>
+            <div class="image-container">
+                <img src="cal.jpeg" alt="Age Calculator Image" class="age">
+            </div>
             <div class="input-box">
+                <label for="date">Select your birth date:</label>
                 <input type="date" id="date">
-                <button onclick="calculateAge()"> Calculate </button>
+                <button onclick="calculateAge()">Calculate</button>
             </div>
             <p id="result"></p>
         </div>
     </div>
     <script>
-        let userInput= document.getElementById("date")
+        const userInput = document.getElementById("date");
         userInput.max = new Date().toISOString().split("T")[0];
-        let result = document.getElementById("result");
+        const result = document.getElementById("result");
 
+        function calculateAge() {
+            const birthDate = new Date(userInput.value);
+            const today = new Date();
 
-        function calculateAge(){
-           
-            let birthDate = new Date(userInput.value); 
+            let years = today.getFullYear() - birthDate.getFullYear();
+            let months = today.getMonth() - birthDate.getMonth();
+            let days = today.getDate() - birthDate.getDate();
 
-            let d1 = birthDate.getDate();
-            let m1 = birthDate.getMonth() + 1;
-            let y1 = birthDate.getFullYear();
-
-            let today = new Date();
-
-            let d2 = today.getDate();
-            let m2 = today.getMonth() + 1;
-            let y2 = today.getFullYear();
-
-            let d3, m3, y3;
-
-            y3 = y2 - y1;
-
-            if(m2 >= m1){
-                m3 = m2 - m1;
-            }else{
-                y3--;
-                m3 = 12 + m2 - m1;
+            if (days < 0) {
+                months--;
+                days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+            }
+            if (months < 0) {
+                years--;
+                months += 12;
             }
 
-            if(d2 >= d1){
-                d3 = d2 - d1;
-            }else{
-                m3--;
-                d3 = getDaysInMonth(y1, m1) + d2 - d1;
-            }
-            if(m3 <0){
-                m3 = 11;
-                y3--;
-            }
-            result.innerHTML = `You are <span> ${y3} </span> years, <span> ${m3} </span> months and <span> ${d3} </span> days old.`;
-        }
-
-        function getDaysInMonth(year, month){
-            return new Date (year, month, 0).getDate();
+            result.innerHTML = `You are <span>${years}</span> years, <span>${months}</span> months and <span>${days}</span> days old.`;
         }
     </script>
 </body>
